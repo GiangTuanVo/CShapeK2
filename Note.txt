@@ -1,0 +1,6 @@
+git init
+git status
+git add --all
+git branch
+git commit -m "name"
+git push -u origin master
