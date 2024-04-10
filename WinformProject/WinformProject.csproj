@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4E8F3E4-0C87-42A8-BE98-35B10EABDA09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinformProject</RootNamespace>
+    <AssemblyName>WinformProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing">
+      <HintPath>..\..\..\..\UI WinForms\Library\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="LibConnection, Version=11.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\LibConnection\bin\Debug\Confused\LibConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection\PlcConnect.cs" />
+    <Compile Include="Control\Motor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Motor.Designer.cs">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPainting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPainting.Designer.cs">
+      <DependentUpon>FormPainting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestMelcRS232.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestMelcRS232.Designer.cs">
+      <DependentUpon>FormTestMelcRS232.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestMXComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestMXComponent.Designer.cs">
+      <DependentUpon>FormTestMXComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Invoid.cs" />
+    <Compile Include="RealTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealTime.Designer.cs">
+      <DependentUpon>RealTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArduinoSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArduinoSerial.Designer.cs">
+      <DependentUpon>FormArduinoSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UserControlReadWrite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UserControlReadWrite.designer.cs">
+      <DependentUpon>UserControlReadWrite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMelsecTcp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMelsecTcp.Designer.cs">
+      <DependentUpon>FormMelsecTcp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModbusTcp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModbusTcp.Designer.cs">
+      <DependentUpon>FormModbusTcp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModbusRtu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModbusRtu.Designer.cs">
+      <DependentUpon>FormModbusRtu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTestUserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestUserControl.Designer.cs">
+      <DependentUpon>FormTestUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemoUtils.cs" />
+    <Compile Include="FormTestControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestControl.Designer.cs">
+      <DependentUpon>FormTestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMelsecComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMelsecComponent.Designer.cs">
+      <DependentUpon>FormMelsecComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="FormMelsecSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMelsecSerial.Designer.cs">
+      <DependentUpon>FormMelsecSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\UserType.cs" />
+    <EmbeddedResource Include="Control\Motor.resx">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArduinoSerial.resx">
+      <DependentUpon>FormArduinoSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UserControlReadWrite.resx">
+      <DependentUpon>UserControlReadWrite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMelsecTcp.resx">
+      <DependentUpon>FormMelsecTcp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModbusTcp.resx">
+      <DependentUpon>FormModbusTcp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModbusRtu.resx">
+      <DependentUpon>FormModbusRtu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPainting.resx">
+      <DependentUpon>FormPainting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestControl.resx">
+      <DependentUpon>FormTestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMelsecComponent.resx">
+      <DependentUpon>FormMelsecComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMelsecSerial.resx">
+      <DependentUpon>FormMelsecSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestMelcRS232.resx">
+      <DependentUpon>FormTestMelcRS232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestMXComponent.resx">
+      <DependentUpon>FormTestMXComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestUserControl.resx">
+      <DependentUpon>FormTestUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealTime.resx">
+      <DependentUpon>RealTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon1.ico" />
+    <None Include="Resources\Motor.png" />
+    <None Include="Resources\Valve.png" />
+    <None Include="Resources\beautiful-flying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RealTime\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActUtlTypeLib">
+      <Guid>{D217E54E-4A26-4A76-B0AB-57166B90F9AF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
