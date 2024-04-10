@@ -7,6 +7,7 @@ namespace XinChao
     {
         static void Main(string[] args)
         {
+            
             string txt1 = "A";
             string txt2 = "B";
             if (txt1 == "A" & txt2 != "B")
@@ -15,15 +16,15 @@ namespace XinChao
 
             }
             //const float PI = 3.14f;
-            //var kieutruefale = true;
+            var kieutruefale = true;
 
             var speed = "1347357";//chuỗi
             //var dateTime = DateTime.Now;
             //float k = 1.0f / 2;//0.5
             float i = (float)1 / 2; //0.5,0
             //WriteLine(speed.GetType());
-            //WriteLine($"MAX: {float.MaxValue}, MIN: {float.MinValue}");
-            //double Speed = Convert.ToDouble(kieutruefale);
+            WriteLine($"MAX: {float.MaxValue}, MIN: {float.MinValue}");
+            double Speed = Convert.ToDouble(kieutruefale);
             //var Speed = int.Parse(k);
 
             bool retrun = int.TryParse(speed,out int value);
