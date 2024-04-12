@@ -16,7 +16,7 @@ namespace WinformProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTestMelcRS232());
+            Application.Run(new FormTestModbusRTU());
         }
     }
 }

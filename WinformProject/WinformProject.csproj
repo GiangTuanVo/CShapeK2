@@ -93,6 +93,12 @@
     <Compile Include="FormTestMelcRS232.Designer.cs">
       <DependentUpon>FormTestMelcRS232.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTestModbusRTU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestModbusRTU.Designer.cs">
+      <DependentUpon>FormTestModbusRTU.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTestMXComponent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTestMelcRS232.resx">
       <DependentUpon>FormTestMelcRS232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTestModbusRTU.resx">
+      <DependentUpon>FormTestModbusRTU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTestMXComponent.resx">
       <DependentUpon>FormTestMXComponent.cs</DependentUpon>
