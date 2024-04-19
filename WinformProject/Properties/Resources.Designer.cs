@@ -83,6 +83,16 @@ namespace WinformProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Solenoi_Valve {
+            get {
+                object obj = ResourceManager.GetObject("Solenoi_Valve", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Valve {
             get {
                 object obj = ResourceManager.GetObject("Valve", resourceCulture);

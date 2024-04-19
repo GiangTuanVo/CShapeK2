@@ -37,6 +37,7 @@ namespace WinformProject
             this.label2 = new System.Windows.Forms.Label();
             this.txtConnect = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.Label();
+            this.motor1 = new WinformProject.Control.Motor();
             this.valve = new WinformProject.Control.Motor();
             this.motorMitsu = new WinformProject.Control.Motor();
             this.SuspendLayout();
@@ -92,6 +93,31 @@ namespace WinformProject
             this.txtStatus.TabIndex = 1;
             this.txtStatus.Text = "Waiting";
             // 
+            // motor1
+            // 
+            this.motor1.AddCurrent = "D12";
+            this.motor1.AddError = "D10";
+            this.motor1.AddSpeed = "D8";
+            this.motor1.AddStatus = "M10";
+            this.motor1.AddTemprature = "D14";
+            this.motor1.Current = 0F;
+            this.motor1.ErrColor = System.Drawing.Color.Empty;
+            this.motor1.Error = ((short)(0));
+            this.motor1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motor1.Icon = global::WinformProject.Properties.Resources.Solenoi_Valve;
+            this.motor1.Location = new System.Drawing.Point(684, 129);
+            this.motor1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.motor1.MotorName = "Solenoi Valve";
+            this.motor1.Name = "motor1";
+            this.motor1.OffColor = System.Drawing.Color.Empty;
+            this.motor1.OnColor = System.Drawing.Color.Empty;
+            this.motor1.Size = new System.Drawing.Size(223, 218);
+            this.motor1.Speed = ((short)(0));
+            this.motor1.Status = false;
+            this.motor1.TabIndex = 5;
+            this.motor1.Temprature = 0F;
+            this.motor1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.motorMitsu_MouseDown);
+            // 
             // valve
             // 
             this.valve.AddCurrent = "D10";
@@ -105,7 +131,7 @@ namespace WinformProject
             this.valve.Error = ((short)(0));
             this.valve.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valve.Icon = global::WinformProject.Properties.Resources.Valve;
-            this.valve.Location = new System.Drawing.Point(463, 129);
+            this.valve.Location = new System.Drawing.Point(387, 129);
             this.valve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.valve.MotorName = "HGDF1213";
             this.valve.Name = "valve";
@@ -131,7 +157,7 @@ namespace WinformProject
             this.motorMitsu.Error = ((short)(0));
             this.motorMitsu.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.motorMitsu.Icon = global::WinformProject.Properties.Resources.Motor;
-            this.motorMitsu.Location = new System.Drawing.Point(110, 116);
+            this.motorMitsu.Location = new System.Drawing.Point(143, 129);
             this.motorMitsu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.motorMitsu.MotorName = "Mitsubishi";
             this.motorMitsu.Name = "motorMitsu";
@@ -148,7 +174,8 @@ namespace WinformProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 502);
+            this.ClientSize = new System.Drawing.Size(988, 502);
+            this.Controls.Add(this.motor1);
             this.Controls.Add(this.valve);
             this.Controls.Add(this.motorMitsu);
             this.Controls.Add(this.txtConnect);
@@ -177,5 +204,6 @@ namespace WinformProject
         private System.Windows.Forms.Label txtStatus;
         private Control.Motor motorMitsu;
         private Control.Motor valve;
+        private Control.Motor motor1;
     }
 }

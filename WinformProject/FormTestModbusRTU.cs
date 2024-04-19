@@ -40,27 +40,29 @@ namespace WinformProject
             if (connect.IsSuccess) MessageBox.Show(connect.Message);
 
             //Read Coil
-            bool readM0 = modbusRtuClient.ReadBool("16384").Content;
+            //bool readM0 = modbusRtuClient.ReadBool("16384").Content;
 
-            bool readM1 = modbusRtuClient.ReadBool("1").Content;
+            //bool readM1 = modbusRtuClient.ReadBool("1").Content;
 
-            bool[] readBoolArr = modbusRtuClient.ReadBool("16384", 8).Content;
-            //Write coil
-            bool[] value = new bool[] { true, false, true, false, true, false, true, false, true };
-            OperateResult ret =modbusRtuClient.Write("16384", value);
-            //OperateResult ret = modbusRtuClient.Write("0", true);
-            //if (ret.IsSuccess) MessageBox.Show(connect.Message);
-            //Read register
+            //bool[] readBoolArr = modbusRtuClient.ReadBool("16384", 8).Content;
+            ////Write coil
+            //bool[] value = new bool[] { true, false, true, false, true, false, true, false, true };
+            //OperateResult ret =modbusRtuClient.Write("16384", value);
+            ////OperateResult ret = modbusRtuClient.Write("0", true);
+            ////if (ret.IsSuccess) MessageBox.Show(connect.Message);
+            ////Read register
             short readD0 = modbusRtuClient.ReadInt16("0").Content;
-            short[] readRegisterArr = modbusRtuClient.ReadInt16("0",10).Content;
+            short[] readRegisterArr = modbusRtuClient.ReadInt16("0", 10).Content;
             //Write register
-            //short value = -234;
-            //int[] arr_Short = new int[] { 12, 34, 56, 78, 23 };
-            //float value = -3.45f;
-            //byte[] arr = Convert(value);//0:205,1:204,2:192,3:92
-            //float[] arr_Short = new float[] { 1.2f, 3.4f, 5.6f, 7.8f, 2.3f };
-            //ret = modbusRtuClient.Write("0", value);
-            //ret = modbusRtuClient.Write("0", arr_Short);
+            short value = -234;
+            int[] arr_Int = new int[] { 12, 34, 56, 78, 23 };
+            OperateResult ret = modbusRtuClient.Write("0", value);
+            ret = modbusRtuClient.Write("0", arr_Int);
+
+            float valuefloat = -3.45f;
+            float[] arr_Float = new float[] { 1.2f, 3.4f, 5.6f, 7.8f, 2.3f };
+            ret = modbusRtuClient.Write("0", valuefloat);
+            ret = modbusRtuClient.Write("0", arr_Float);
             //double double_val = 121435678;
             //ret = modbusRtuClient.Write("0", double_val);
 

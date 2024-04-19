@@ -16,7 +16,7 @@ namespace WinformProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTestModbusRTU());
+            Application.Run(new FormTestUserControl());
         }
     }
 }
