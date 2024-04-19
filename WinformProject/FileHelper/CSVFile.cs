@@ -19,7 +19,8 @@ namespace WinformProject.FileHelper
             int num2 = 0;
             try
             {
-                if (!File.Exists(Path.Combine(folder, fileName)))
+                string path = Path.Combine(folder, fileName);
+                if (!File.Exists(path))
                     return;
                 StreamReader streamReader = new StreamReader(Path.Combine(folder, fileName), Encoding.Default);
                 while (streamReader.Peek() >= 0)

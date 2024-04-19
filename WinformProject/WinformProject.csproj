@@ -50,6 +50,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\LibConnection\bin\Debug\Confused\LibConnection.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SunnyUI, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\SunnyUI.dll</HintPath>
@@ -75,6 +76,14 @@
     <Compile Include="Control\Motor.Designer.cs">
       <DependentUpon>Motor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\Valve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Valve.Designer.cs">
+      <DependentUpon>Valve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileHelper\CSVFile.cs" />
+    <Compile Include="FileHelper\INIFile.cs" />
     <Compile Include="FormPainting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +114,19 @@
     <Compile Include="FormTestMXComponent.Designer.cs">
       <DependentUpon>FormTestMXComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\GetDataTable.cs" />
     <Compile Include="Print\Invoid.cs" />
-    <Compile Include="RealTime.cs">
+    <Compile Include="RealTimeValve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RealTime.Designer.cs">
-      <DependentUpon>RealTime.cs</DependentUpon>
+    <Compile Include="RealTimeValve.Designer.cs">
+      <DependentUpon>RealTimeValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealTimeMotor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealTimeMotor.Designer.cs">
+      <DependentUpon>RealTimeMotor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormArduinoSerial.cs">
       <SubType>Form</SubType>
@@ -186,6 +202,9 @@
     <EmbeddedResource Include="Control\Motor.resx">
       <DependentUpon>Motor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Valve.resx">
+      <DependentUpon>Valve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormArduinoSerial.resx">
       <DependentUpon>FormArduinoSerial.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,8 +253,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealTime.resx">
-      <DependentUpon>RealTime.cs</DependentUpon>
+    <EmbeddedResource Include="RealTimeValve.resx">
+      <DependentUpon>RealTimeValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealTimeMotor.resx">
+      <DependentUpon>RealTimeMotor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestMelsecTcp.resx">
       <DependentUpon>TestMelsecTcp.cs</DependentUpon>

@@ -7,6 +7,7 @@ namespace WinformProject.Connection
     {
         public static MelsecMcNet melsec_net;
         public static bool isConnect = false;
+        //Funtion connect to PLC
         public static string ConnectionPLc(string ip, int port, int timeout)
         {
             melsec_net = new MelsecMcNet();

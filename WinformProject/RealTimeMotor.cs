@@ -6,7 +6,7 @@ using WinformProject.Control;
 
 namespace WinformProject
 {
-    public partial class RealTime : Form
+    public partial class RealTimeMotor : Form
     {
         //Get object
         public delegate void Instant(Motor mmotor);
@@ -15,7 +15,7 @@ namespace WinformProject
         Motor motor { get; set; }
         Thread thread = null;
         bool isThread = true;
-        public RealTime()
+        public RealTimeMotor()
         {
             InitializeComponent();
             GetInstant = new Instant(GetObject);
