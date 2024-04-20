@@ -36,7 +36,6 @@ namespace WinformProject
                         //
                         valve.ColorOn = Color.Blue;
                         //
-
                         valve.AddrStatus = item.ItemArray[1].ToString();
                         valve.AddrErrorID = item.ItemArray[2].ToString();
                         valve.AddrFlow = item.ItemArray[3].ToString();
